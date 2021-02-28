@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  wine:
+    build: .
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ${HOME}/.Xauthority:/root/.Xauthority
+      - ${HOME}/.vdrift:/root/.vdrift
+      # - ./star:/root/star
+    devices:
+      - /dev/input:/dev/input
+      - /dev/snd:/dev/snd
+      - /dev/dri:/dev/dri
+      - /dev/dsp:/dev/dsp
+    command: >
+      bash -c "
+        wine /root/air.exe -silent &&
+        wine /root/star/star_shooter_app/star_shooter_app.exe
+      "
