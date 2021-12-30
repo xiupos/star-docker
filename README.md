@@ -3,4 +3,4 @@ Dockerfile and docker-compose.yml to play [すたーしゅーたー&amp;すた�
 
 ## Usage
 
-See https://nombi.info/posts/computer/star-docker/ (Use Google Translate)
+See https://blog.nombi.link/posts/computer/star-docker/ (Use Google Translate)
